@@ -2,6 +2,7 @@
 import SideBarFooter from "./SideBarFooter.astro";
 import { Image } from "astro:assets";
 import SideBarMenu from "./SideBarMenu.astro";
+import { NAME, BIO, LOCATION } from "../config";
 const { sideBarActiveItemID } = Astro.props;
 ---
 
@@ -16,6 +17,11 @@ const { sideBarActiveItemID } = Astro.props;
           </div>
         </div>
       </a>
+    </div>
+    <div class="px-4 pb-2 text-center">
+      <div class="font-bold">{NAME}</div>
+      <div class="text-sm opacity-75">{LOCATION}</div>
+      <p class="text-sm mt-2 opacity-90">{BIO}</p>
     </div>
     <SideBarMenu sideBarActiveItemID={sideBarActiveItemID} />
     <SideBarFooter />
