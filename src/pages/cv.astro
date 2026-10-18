@@ -8,11 +8,21 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     <div class="text-3xl w-full font-bold">Profile</div>
   </div>
 
-  <div class="mb-10 text-justify">
+  <div class="mb-5 text-justify">
     Master's student in Computer Science (Cloud Computing & Infrastructure) with hands-on
     experience in backend development, REST APIs, Docker, and CI/CD. Fluent in English (C1) and
     comfortable in international, agile environments. Seeking a software engineering / DevOps &
     automation internship.
+  </div>
+
+  <div class="flex flex-wrap gap-2 mb-10">
+    <span class="badge badge-primary badge-lg">Python</span>
+    <span class="badge badge-primary badge-lg">Django</span>
+    <span class="badge badge-primary badge-lg">Docker</span>
+    <span class="badge badge-primary badge-lg">CI/CD</span>
+    <span class="badge badge-primary badge-lg">REST APIs</span>
+    <span class="badge badge-primary badge-lg">NLP / LLM</span>
+    <span class="badge badge-primary badge-lg">Cloud</span>
   </div>
 
   <div class="mb-5">
@@ -22,14 +32,20 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   <div class="time-line-container grid gap-4 mb-10">
     <TimeLineElement
       title="Master 2 in Computer Science (MoSIG) — Cloud Computing & Infrastructure"
-      subtitle="Sep 2026 – Present at Grenoble INP - Ensimag / Université Grenoble Alpes, Grenoble, France"
+      subtitle="Sep 2026 – Present · Grenoble INP - Ensimag / Université Grenoble Alpes, Grenoble, France"
     >
       Relevant courses: Cloud Computing, Large-Scale Data Management, Computer Security, Model
       Checking & Formal Verification, Performance Evaluation, Advanced Software Engineering.
     </TimeLineElement>
     <TimeLineElement
+      title="Master of Science in Informatics at Grenoble (MoSIG)"
+      subtitle="Sep 2025 – Jun 2026 · Université Grenoble Alpes, Grenoble, France"
+    >
+      First year of the two-year MoSIG master program.
+    </TimeLineElement>
+    <TimeLineElement
       title="Engineering Degree in Systems and Computer Science (Bac+5)"
-      subtitle="2020 – 2025 at Universidad del Norte, Barranquilla, Colombia"
+      subtitle="2020 – 2025 · Universidad del Norte, Barranquilla, Colombia"
     >
       Relevant courses: Software Design & Architecture, Operating Systems, Computer Networks,
       Databases, Algorithms & Complexity, Compilers.
@@ -42,8 +58,8 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
   <div class="time-line-container mb-10">
     <TimeLineElement
-      title="R&D Intern in Software Engineering & Research (SusInnoS Project)"
-      subtitle="Feb 2026 – Sep 2026 at Laboratoire G-SCOP (CNRS / UGA), Grenoble, France"
+      title="R&D Software Engineering & Research Intern"
+      subtitle="Feb 2026 – Sep 2026 · G-SCOP Lab (CNRS / UGA), Grenoble, France"
     >
       Designed a semantic search engine (NLP) combining Sentence-BERT, FAISS, and Cross-Encoder to
       automatically map industrial nomenclatures (BOM) to the Ecoinvent database.<br />
@@ -53,59 +69,144 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
       specifications (Markdown, JSON schemas).
     </TimeLineElement>
     <TimeLineElement
-      title="Mentorship Lead — ACM Student Chapter"
-      subtitle="Feb 2024 – Aug 2025 at Universidad del Norte, Barranquilla, Colombia"
+      title="Mentoring Director — ACM Student Group"
+      subtitle="Feb 2024 – Aug 2025 · Universidad del Norte, Barranquilla, Colombia"
     >
       Led the technical mentorship program, coordinated development workshops, and provided
       academic support to computer science students.
     </TimeLineElement>
     <TimeLineElement
-      title="Programming Instructor & Teaching Assistant"
-      subtitle="Feb 2022 – May 2025 at Universidad del Norte, Barranquilla, Colombia"
+      title="Python Programming Instructor"
+      subtitle="Feb 2023 – May 2025 · Universidad del Norte, Barranquilla, Colombia"
     >
-      Ran hands-on workshops in Python and Java (OOP, algorithms) and provided teaching assistance
-      for the Introduction to Computer Science course (exercise design, code review).
+      Ran hands-on workshops in Python covering object-oriented programming and algorithms.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Private Scholar Tutor — Math & Physics"
+      subtitle="Jan 2023 – May 2025 · Barranquilla, Colombia"
+    >
+      Provided one-on-one tutoring in mathematics and physics, strengthening students' conceptual
+      understanding and problem-solving skills.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Introduction to Computer Science — Teaching Assistant"
+      subtitle="Feb 2022 – Nov 2023 · Universidad del Norte, Barranquilla, Colombia"
+    >
+      Assisted with the Introduction to Computer Science course, including exercise design and
+      code review.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Java Programming Workshop Instructor"
+      subtitle="Feb 2022 – May 2023 · Universidad del Norte, Barranquilla, Colombia"
+    >
+      Ran hands-on workshops in Java covering object-oriented programming and algorithms.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Research Consultant for a Graduate Project"
+      subtitle="Aug 2022 – Nov 2022 · Universidad del Norte, Barranquilla, Colombia"
+    >
+      Provided research and technical guidance for a graduate-level project.
     </TimeLineElement>
   </div>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Projects & Research</div>
+    <div class="text-3xl w-full font-bold">Research</div>
   </div>
 
   <div class="time-line-container mb-10">
     <TimeLineElement
-      title="Transcription & Contextualization System (Capstone)"
+      title="Automatic Transcription & Contextualization System"
       subtitle="Python, Vosk, ChromaDB, JavaScript · 2025"
     >
-      Open-source web application converting audio recordings into Markdown study guides,
-      integrating a fine-tuned Vosk ASR model with contextual vector search via ChromaDB.
-    </TimeLineElement>
-    <TimeLineElement
-      title="Rubik's Race — Heuristic Solving"
-      subtitle="Python, A* Algorithm, Manhattan Distance · 2025"
-    >
-      Web application solving Rubik's Race via the A* algorithm with a custom heuristic combining
-      Manhattan distance and a bonus term for completed rows.
+      Open-source web application that automatically transcribes class audio and contextualizes it
+      to generate structured, referenced study guides.<br />
+      <a href="http://hdl.handle.net/10584/13381" target="_blank" class="link link-primary">View publication →</a>
     </TimeLineElement>
     <TimeLineElement
       title="Huesitos — Medical Image Analysis & AI"
       subtitle="Python, TensorFlow, Scikit-learn, OpenCV, Gradio · 2024"
     >
-      CNN-based fracture detection system on X-rays with a confidence threshold below 25%, creation
-      of an annotated dataset (600+ images), and comparison of feature extraction methods against
-      deep learning.
+      Machine-learning study applying CNNs to fracture detection in X-rays, with the creation of
+      the "Huesitos" dataset and comparison of feature extraction methods against deep learning.<br />
+      <a href="https://github.com/Slrosales/Huesitos/blob/main/Informe%20de%20Semillero%20de%20Investigación.pdf" target="_blank" class="link link-primary">View report →</a>
     </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Areas of Interest</div>
+  </div>
+
+  <div class="grid gap-3 md:grid-cols-2 mb-10">
+    <div class="bg-base-200 border-l-4 border-primary rounded-lg px-4 py-3">AI in Education to develop EdTech Tools</div>
+    <div class="bg-base-200 border-l-4 border-primary rounded-lg px-4 py-3">Environmental ML for Disaster Prevention</div>
+    <div class="bg-base-200 border-l-4 border-primary rounded-lg px-4 py-3">Sustainable Construction & LCA Automation</div>
+    <div class="bg-base-200 border-l-4 border-primary rounded-lg px-4 py-3">Sports Analytics</div>
+    <div class="bg-base-200 border-l-4 border-primary rounded-lg px-4 py-3">Distributed Systems & Cloud Infrastructure</div>
+    <div class="bg-base-200 border-l-4 border-primary rounded-lg px-4 py-3">Computer Science Pedagogy & Mentoring</div>
   </div>
 
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Skills</div>
   </div>
 
-  <div class="mb-10 space-y-2">
-    <p><span class="font-semibold">Programming Languages:</span> Python, SQL, JavaScript, Java, C</p>
-    <p><span class="font-semibold">Cloud, DevOps & Tools:</span> Docker, Git, GitHub Actions, Linux (Bash), Pytest, Azure, Kubernetes (notions), CI/CD, Postman</p>
-    <p><span class="font-semibold">Backend & Databases:</span> Django, Node.js, REST APIs, PostgreSQL, MongoDB, SQLite, MySQL, ChromaDB (Vector DB)</p>
-    <p><span class="font-semibold">AI & Scientific Computing:</span> OpenAI, Gemini, Hugging Face, Sentence-BERT, FAISS, Brightway (LCA), TensorFlow, Scikit-learn</p>
-    <p><span class="font-semibold">Languages:</span> English (Fluent — C1), Spanish (Native), French (Intermediate — B1 in progress)</p>
+  <div class="space-y-5 mb-10">
+    <div>
+      <div class="text-sm font-semibold uppercase tracking-wide opacity-70 mb-2">Programming Languages</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="badge badge-outline">Python</span>
+        <span class="badge badge-outline">SQL</span>
+        <span class="badge badge-outline">JavaScript</span>
+        <span class="badge badge-outline">Java</span>
+        <span class="badge badge-outline">C</span>
+      </div>
+    </div>
+    <div>
+      <div class="text-sm font-semibold uppercase tracking-wide opacity-70 mb-2">Cloud, DevOps & Tools</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="badge badge-outline">Docker</span>
+        <span class="badge badge-outline">Git</span>
+        <span class="badge badge-outline">GitHub Actions</span>
+        <span class="badge badge-outline">Linux (Bash)</span>
+        <span class="badge badge-outline">Pytest</span>
+        <span class="badge badge-outline">Azure</span>
+        <span class="badge badge-outline">Kubernetes</span>
+        <span class="badge badge-outline">CI/CD</span>
+        <span class="badge badge-outline">Postman</span>
+      </div>
+    </div>
+    <div>
+      <div class="text-sm font-semibold uppercase tracking-wide opacity-70 mb-2">Backend & Databases</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="badge badge-outline">Django</span>
+        <span class="badge badge-outline">Node.js</span>
+        <span class="badge badge-outline">REST APIs</span>
+        <span class="badge badge-outline">PostgreSQL</span>
+        <span class="badge badge-outline">MongoDB</span>
+        <span class="badge badge-outline">SQLite</span>
+        <span class="badge badge-outline">MySQL</span>
+        <span class="badge badge-outline">ChromaDB</span>
+      </div>
+    </div>
+    <div>
+      <div class="text-sm font-semibold uppercase tracking-wide opacity-70 mb-2">AI & Scientific Computing</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="badge badge-outline">OpenAI</span>
+        <span class="badge badge-outline">Gemini</span>
+        <span class="badge badge-outline">Hugging Face</span>
+        <span class="badge badge-outline">Sentence-BERT</span>
+        <span class="badge badge-outline">FAISS</span>
+        <span class="badge badge-outline">Brightway (LCA)</span>
+        <span class="badge badge-outline">TensorFlow</span>
+        <span class="badge badge-outline">Scikit-learn</span>
+      </div>
+    </div>
+    <div>
+      <div class="text-sm font-semibold uppercase tracking-wide opacity-70 mb-2">Languages</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="badge badge-outline">Spanish — Native</span>
+        <span class="badge badge-outline">English — C1</span>
+        <span class="badge badge-outline">French — B1</span>
+      </div>
+    </div>
   </div>
 </BaseLayout>
