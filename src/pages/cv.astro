@@ -3,16 +3,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import TimeLineElement from "../components/cv/TimeLine.astro";
 ---
 
-<BaseLayout title="Resume" sideBarActiveItemID="cv">
+<BaseLayout title="Curriculum Vitae" sideBarActiveItemID="cv">
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Profile</div>
   </div>
 
   <div class="mb-10 text-justify">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    Master's student in Computer Science (Cloud Computing & Infrastructure) with hands-on
+    experience in backend development, REST APIs, Docker, and CI/CD. Fluent in English (C1) and
+    comfortable in international, agile environments. Seeking a software engineering / DevOps &
+    automation internship.
   </div>
 
   <div class="mb-5">
@@ -21,13 +21,19 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
   <div class="time-line-container grid gap-4 mb-10">
     <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
-    />
+      title="Master 2 in Computer Science (MoSIG) — Cloud Computing & Infrastructure"
+      subtitle="Sep 2026 – Present at Grenoble INP - Ensimag / Université Grenoble Alpes, Grenoble, France"
+    >
+      Relevant courses: Cloud Computing, Large-Scale Data Management, Computer Security, Model
+      Checking & Formal Verification, Performance Evaluation, Advanced Software Engineering.
+    </TimeLineElement>
     <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
-    />
+      title="Engineering Degree in Systems and Computer Science (Bac+5)"
+      subtitle="2020 – 2025 at Universidad del Norte, Barranquilla, Colombia"
+    >
+      Relevant courses: Software Design & Architecture, Operating Systems, Computer Networks,
+      Databases, Algorithms & Complexity, Compilers.
+    </TimeLineElement>
   </div>
 
   <div class="mb-5">
@@ -36,57 +42,70 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
   <div class="time-line-container mb-10">
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="R&D Intern in Software Engineering & Research (SusInnoS Project)"
+      subtitle="Feb 2026 – Sep 2026 at Laboratoire G-SCOP (CNRS / UGA), Grenoble, France"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      Designed a semantic search engine (NLP) combining Sentence-BERT, FAISS, and Cross-Encoder to
+      automatically map industrial nomenclatures (BOM) to the Ecoinvent database.<br />
+      Developed the Life Cycle Assessment (LCA) calculation pipeline via Brightway and a REST API
+      backend using Python, Django, PostgreSQL, SQLite, and Docker, with CI/CD automation.<br />
+      Performed model benchmarks (Hugging Face), wrote automated tests (Pytest), and technical
+      specifications (Markdown, JSON schemas).
     </TimeLineElement>
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="Mentorship Lead — ACM Student Chapter"
+      subtitle="Feb 2024 – Aug 2025 at Universidad del Norte, Barranquilla, Colombia"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      Led the technical mentorship program, coordinated development workshops, and provided
+      academic support to computer science students.
     </TimeLineElement>
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="Programming Instructor & Teaching Assistant"
+      subtitle="Feb 2022 – May 2025 at Universidad del Norte, Barranquilla, Colombia"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      Ran hands-on workshops in Python and Java (OOP, algorithms) and provided teaching assistance
+      for the Introduction to Computer Science course (exercise design, code review).
     </TimeLineElement>
   </div>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Certifications</div>
+    <div class="text-3xl w-full font-bold">Projects & Research</div>
   </div>
 
-  <ul class="list-disc mx-6 mb-10 grid gap-2">
-    <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
-    </li>
-    <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
-    </li>
-  </ul>
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Transcription & Contextualization System (Capstone)"
+      subtitle="Python, Vosk, ChromaDB, JavaScript · 2025"
+    >
+      Open-source web application converting audio recordings into Markdown study guides,
+      integrating a fine-tuned Vosk ASR model with contextual vector search via ChromaDB.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Rubik's Race — Heuristic Solving"
+      subtitle="Python, A* Algorithm, Manhattan Distance · 2025"
+    >
+      Web application solving Rubik's Race via the A* algorithm with a custom heuristic combining
+      Manhattan distance and a bonus term for completed rows.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Huesitos — Medical Image Analysis & AI"
+      subtitle="Python, TensorFlow, Scikit-learn, OpenCV, Gradio · 2024"
+    >
+      CNN-based fracture detection system on X-rays with a confidence threshold below 25%, creation
+      of an annotated dataset (600+ images), and comparison of feature extraction methods against
+      deep learning.
+    </TimeLineElement>
+  </div>
 
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Skills</div>
   </div>
 
-  <ul class="list-disc md:columns-5 columns-2 mx-6">
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-  </ul>
+  <div class="mb-10 space-y-2">
+    <p><span class="font-semibold">Programming Languages:</span> Python, SQL, JavaScript, Java, C</p>
+    <p><span class="font-semibold">Cloud, DevOps & Tools:</span> Docker, Git, GitHub Actions, Linux (Bash), Pytest, Azure, Kubernetes (notions), CI/CD, Postman</p>
+    <p><span class="font-semibold">Backend & Databases:</span> Django, Node.js, REST APIs, PostgreSQL, MongoDB, SQLite, MySQL, ChromaDB (Vector DB)</p>
+    <p><span class="font-semibold">AI & Scientific Computing:</span> OpenAI, Gemini, Hugging Face, Sentence-BERT, FAISS, Brightway (LCA), TensorFlow, Scikit-learn</p>
+    <p><span class="font-semibold">Languages:</span> English (Fluent — C1), Spanish (Native), French (Intermediate — B1 in progress)</p>
+  </div>
 </BaseLayout>
