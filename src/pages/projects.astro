@@ -9,26 +9,34 @@ import HorizontalCard from "../components/HorizontalCard.astro";
   </div>
 
   <HorizontalCard
-    title="Transcription & Contextualization System"
+    title="SusInnoS Platform"
     img="/post_img.webp"
-    desc="Open-source web application that converts audio recordings into Markdown study guides, integrating a fine-tuned Vosk ASR model with contextual vector search via ChromaDB. Built with Python, Vosk, ChromaDB, and JavaScript."
-    url="https://github.com/slrosales"
-    badge="Capstone"
+    desc="Developed core modules for the SusInnoS platform (G-SCOP / CNRS) to automate Life Cycle Assessment: an AI semantic search engine (Sentence-BERT, FAISS, Cross-Encoder) mapping Bills of Materials to Ecoinvent, an LCA calculation engine with Brightway, and Hugging Face model benchmarking. Built with Python, Django, PostgreSQL, SQLite, Docker, and Git."
+    url="https://www.linkedin.com/company/susinnos"
+    badge="R&D"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Rubik's Race — Heuristic Solving"
+    title="Transcription & Contextualization System"
     img="/post_img.webp"
-    desc="Web application that solves Rubik's Race using the A* algorithm with a custom heuristic combining Manhattan distance and a bonus term for completed rows. Built with Python."
-    url="https://github.com/slrosales"
-    badge="Search"
+    desc="Open-source web application that automatically transcribes class audio and contextualizes it into structured, referenced study guides exportable in Markdown. Uses a Vosk (Kaldi) ASR model fine-tuned for Latin American Spanish, enriched with student notes and open-access resources. Built with Python, ChromaDB, and JavaScript."
+    url="http://hdl.handle.net/10584/13381"
+    badge="Capstone"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
     title="Huesitos — Medical Image Analysis & AI"
     img="/post_img.webp"
-    desc="CNN-based fracture detection on X-rays with a confidence threshold, built on an annotated dataset of 600+ images. Compares feature extraction methods (HOG, Haralick, Otsu) against deep learning. Built with Python, TensorFlow, Scikit-learn, OpenCV."
-    url="https://github.com/slrosales"
+    desc="Machine-learning system for fracture detection in X-rays using Convolutional Neural Networks, classifying images as fractured, non-fractured, or unidentified below a 25% confidence threshold. Built on the 'Huesitos' dataset (326 fracture + 300 non-fracture images) and compared HOG, Otsu, Haralick, and gradient features against deep learning."
+    url="https://github.com/Slrosales/Huesitos"
     badge="AI/ML"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Rubik's Race — Heuristic Solving"
+    img="/post_img.webp"
+    desc="Web application that solves the Rubik's Race puzzle using the A* algorithm with a heuristic based on Manhattan distance. Load an initial and target state and view the solution step by step."
+    url="https://github.com/Slrosales/Rubik_Race_Heuristic_solution"
+    badge="Search"
   />
 </BaseLayout>

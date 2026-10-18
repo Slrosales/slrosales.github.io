@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
-import createSlug from "../lib/createSlug"
+import createSlug from "../lib/createSlug";
 
 const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
@@ -11,49 +11,66 @@ const last_posts = posts.slice(0, 3);
 
 <BaseLayout sideBarActiveItemID="home">
   <div class="pb-12 mt-5">
-    <div class="text-xl py-1">Hey there 👋</div>
-    <div class="text-5xl font-bold">I'm Laura Sofia Gomez Rosales</div>
-    <div class="text-3xl py-3 font-bold">Master's Student in Computer Science — Cloud Computing & Infrastructure</div>
-    <div class="py-2">
-      <p class="text-lg">
-        Master's student at Grenoble INP – Ensimag with hands-on experience in backend development, REST APIs, Docker, and CI/CD.
-        Seeking a software engineering internship.
-      </p>
+    <div class="badge badge-primary gap-1 mb-4">Systems Engineer & M2 MoSIG</div>
+    <h1 class="text-4xl md:text-5xl font-bold">Hi, I'm Laura Sofia Gomez Rosales 👋</h1>
+    <p class="text-xl py-3">
+      Systems Engineer from Universidad del Norte - Colombia, currently based in France completing
+      my M2 in Cloud Computing & Infrastructure (MoSIG) at Grenoble INP - Ensimag.
+    </p>
+
+    <p class="text-lg py-2">
+      I work at the intersection of software engineering and applied AI. From building a semantic
+      search engine for Life Cycle Assessment at G-SCOP (CNRS), to CNN-based medical imaging and an
+      ASR-powered transcription engine, I turn research ideas into tested, documented, and
+      maintainable software.
+    </p>
+
+    <div class="mt-6">
+      <h2 class="text-2xl font-bold mb-3">How I work</h2>
+      <ul class="space-y-2">
+        <li><span class="font-semibold">Context-Driven:</span> I make sure to deeply understand project context and business requirements before choosing an architectural approach.</li>
+        <li><span class="font-semibold">Test & Quality Focused:</span> Highly critical when it comes to automated testing, software reliability, and data integrity.</li>
+        <li><span class="font-semibold">Team & Documentation:</span> Passionate about clear technical documentation, agile collaboration (Scrum), and knowledge sharing.</li>
+        <li><span class="font-semibold">Pragmatic with AI:</span> Skilled in prompt engineering and AI-assisted tooling, but always applying engineering judgment to audit and validate generated solutions.</li>
+      </ul>
     </div>
-    <div class="mt-8">
-      <a class="btn" href="https://linkedin.com/in/gomezrol" target="_blank"> Let's connect!</a>
-      <a href="https://github.com/slrosales" target="_blank" class="btn btn-outline ml-5">
-        View GitHub
-      </a>
+
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a class="btn btn-primary" href="/projects">View Projects</a>
+      <a class="btn btn-outline" href="/cv">View CV & Experience</a>
+      <a class="btn btn-ghost" href="mailto:slrosales03@gmail.com">Get in Touch</a>
     </div>
   </div>
 
   <div>
-    <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
+    <div class="text-3xl w-full font-bold mb-6">Featured Highlights</div>
+    <div class="grid gap-4 md:grid-cols-3">
+      <a href="https://www.linkedin.com/company/susinnos" target="_blank" class="card bg-base-200 transition ease-in-out hover:shadow-xl hover:scale-[102%]">
+        <div class="card-body">
+          <h3 class="card-title text-lg">SusInnoS Platform</h3>
+          <div class="badge badge-secondary w-fit">R&D · G-SCOP / CNRS</div>
+          <p class="text-sm opacity-75 font-medium">Semantic Retrieval & LCA Automation</p>
+          <p class="text-sm">AI semantic search engine mapping industrial BOMs to Ecoinvent and automating LCA calculations.</p>
+        </div>
+      </a>
+      <a href="https://github.com/Slrosales/Huesitos" target="_blank" class="card bg-base-200 transition ease-in-out hover:shadow-xl hover:scale-[102%]">
+        <div class="card-body">
+          <h3 class="card-title text-lg">Huesitos</h3>
+          <div class="badge badge-secondary w-fit">Computer Vision</div>
+          <p class="text-sm opacity-75 font-medium">CNN Fracture Detection</p>
+          <p class="text-sm">CNN-based fracture detection on X-rays with a confidence threshold, built on a 600+ image dataset.</p>
+        </div>
+      </a>
+      <a href="http://hdl.handle.net/10584/13381" target="_blank" class="card bg-base-200 transition ease-in-out hover:shadow-xl hover:scale-[102%]">
+        <div class="card-body">
+          <h3 class="card-title text-lg">Academic Transcription Engine</h3>
+          <div class="badge badge-secondary w-fit">Capstone</div>
+          <p class="text-sm opacity-75 font-medium">Vosk ASR & ChromaDB Vector Search</p>
+          <p class="text-sm">Web app turning class audio into structured, referenced study guides with a fine-tuned Vosk ASR model.</p>
+        </div>
+      </a>
+    </div>
   </div>
-
-  <HorizontalCard
-    title="Demo Project 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="NEW"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
-  />
 
   <div>
     <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
