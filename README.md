@@ -1,6 +1,4 @@
-# Laura Sofía Gómez Rosales — Portfolio
-
-Personal portfolio and CV website for **Laura Sofía Gómez Rosales**, Systems Engineer and Master's student in Cloud Computing & Infrastructure (MoSIG) at Grenoble INP – Ensimag.
+# Portfolio
 
 ## Live site
 
