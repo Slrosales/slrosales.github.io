@@ -18,9 +18,21 @@ const {
 ---
 
 <!doctype html>
-<html lang="en" data-theme="lofi">
+<html lang="en" data-theme="slrosales">
   <head>
     <BaseHead title={title} description={description} image={image} , ogType={ogType} />
+    <script is:inline>
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          document.documentElement.setAttribute(
+            "data-theme",
+            stored || (prefersDark ? "slrosales-dark" : "slrosales")
+          );
+        } catch (e) {}
+      })();
+    </script>
     {TRANSITION_API && <ViewTransitions />}
   </head>
   <body>
@@ -37,5 +49,20 @@ const {
       </div>
       {includeSidebar && <SideBar sideBarActiveItemID={sideBarActiveItemID} />}
     </div>
+    <script>
+      document.addEventListener("click", (event) => {
+        const target = event.target;
+        if (!(target instanceof Element) || !target.closest(".theme-toggle")) return;
+        const root = document.documentElement;
+        const next =
+          root.getAttribute("data-theme") === "slrosales-dark"
+            ? "slrosales"
+            : "slrosales-dark";
+        root.setAttribute("data-theme", next);
+        try {
+          localStorage.setItem("theme", next);
+        } catch (e) {}
+      });
+    </script>
   </body>
 </html>
