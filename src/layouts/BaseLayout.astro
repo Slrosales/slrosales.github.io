@@ -50,19 +50,35 @@ const {
       {includeSidebar && <SideBar sideBarActiveItemID={sideBarActiveItemID} />}
     </div>
     <script>
-      document.addEventListener("click", (event) => {
-        const target = event.target;
-        if (!(target instanceof Element) || !target.closest(".theme-toggle")) return;
+      (() => {
         const root = document.documentElement;
-        const next =
-          root.getAttribute("data-theme") === "slrosales-dark"
-            ? "slrosales"
-            : "slrosales-dark";
-        root.setAttribute("data-theme", next);
-        try {
-          localStorage.setItem("theme", next);
-        } catch (e) {}
-      });
+        const applyTheme = () => {
+          let theme = null;
+          try {
+            theme = localStorage.getItem("theme");
+          } catch (e) {}
+          if (!theme) {
+            theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "slrosales-dark"
+              : "slrosales";
+          }
+          root.setAttribute("data-theme", theme);
+        };
+        applyTheme();
+        document.addEventListener("astro:after-swap", applyTheme);
+        document.addEventListener("click", (event) => {
+          const target = event.target;
+          if (!(target instanceof Element) || !target.closest(".theme-toggle")) return;
+          const next =
+            root.getAttribute("data-theme") === "slrosales-dark"
+              ? "slrosales"
+              : "slrosales-dark";
+          root.setAttribute("data-theme", next);
+          try {
+            localStorage.setItem("theme", next);
+          } catch (e) {}
+        });
+      })();
     </script>
   </body>
 </html>
