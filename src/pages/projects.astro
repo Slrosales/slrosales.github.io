@@ -5,6 +5,7 @@ import { Image } from "astro:assets";
 import tutorly from "../assets/projects/tutorly.webp";
 import huesitos from "../assets/projects/huesitos.webp";
 import rubik from "../assets/projects/rubik.webp";
+import gScop from "../assets/projects/g_scop.webp";
 ---
 
 <BaseLayout title="Projects" sideBarActiveItemID="projects">
@@ -14,7 +15,7 @@ import rubik from "../assets/projects/rubik.webp";
 
   <HorizontalCard
     title="SusInnoS Platform"
-    img="/post_img.webp"
+    img={gScop}
     desc="Developed core modules for the SusInnoS platform (G-SCOP / CNRS) to automate Life Cycle Assessment: an AI semantic search engine (Sentence-BERT, FAISS, Cross-Encoder) mapping Bills of Materials to Ecoinvent, an LCA calculation engine with Brightway, and Hugging Face model benchmarking. Built with Python, Django, PostgreSQL, SQLite, Docker, and Git."
     url="https://www.susinnos.fr"
     badge="R&D"
