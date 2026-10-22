@@ -34,7 +34,15 @@ import ThemeToggle from "./ThemeToggle.astro";
             ></path>
         </svg>
     </a>
-    <a href="mailto:slrosales03@gmail.com" class="mx-3" aria-label="Email" title="Email">
+    <a
+        href="#"
+        class="mx-3 email-link"
+        data-user="slrosales03"
+        data-domain="gmail.com"
+        data-subject="Hello from your portfolio"
+        aria-label="Email"
+        title="Email"
+    >
         <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -60,3 +68,18 @@ import ThemeToggle from "./ThemeToggle.astro";
     </a>
     <ThemeToggle class="mx-3" />
 </div>
+
+<script>
+  const setupEmail = () => {
+    document.querySelectorAll<HTMLAnchorElement>(".email-link").forEach((el) => {
+      const user = el.dataset.user;
+      const domain = el.dataset.domain;
+      if (!user || !domain) return;
+      const subject = el.dataset.subject;
+      const query = subject ? `?subject=${encodeURIComponent(subject)}` : "";
+      el.href = `mailto:${user}@${domain}${query}`;
+    });
+  };
+  setupEmail();
+  document.addEventListener("astro:after-swap", setupEmail);
+</script>
