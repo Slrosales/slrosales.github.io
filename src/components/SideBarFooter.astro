@@ -37,6 +37,8 @@ import ThemeToggle from "./ThemeToggle.astro";
     <a
         href="#"
         class="mx-3 email-link"
+        target="_blank"
+        rel="noopener noreferrer"
         data-user="slrosales03"
         data-domain="gmail.com"
         data-subject="Hello from your portfolio"
@@ -76,8 +78,9 @@ import ThemeToggle from "./ThemeToggle.astro";
       const domain = el.dataset.domain;
       if (!user || !domain) return;
       const subject = el.dataset.subject;
-      const query = subject ? `?subject=${encodeURIComponent(subject)}` : "";
-      el.href = `mailto:${user}@${domain}${query}`;
+      const to = encodeURIComponent(`${user}@${domain}`);
+      const su = subject ? `&su=${encodeURIComponent(subject)}` : "";
+      el.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}${su}`;
     });
   };
   setupEmail();
