@@ -6,6 +6,7 @@ import tutorly from "../assets/projects/tutorly.webp";
 import huesitos from "../assets/projects/huesitos.webp";
 import rubik from "../assets/projects/rubik.webp";
 import gScop from "../assets/projects/g_scop.webp";
+import colDet from "../assets/projects/col_det.webp";
 ---
 
 <BaseLayout title="Research & Development" sideBarActiveItemID="projects">
@@ -35,6 +36,15 @@ import gScop from "../assets/projects/g_scop.webp";
     desc="Machine-learning system for fracture detection in X-rays using Convolutional Neural Networks, classifying images as fractured, non-fractured, or unidentified below a 25% confidence threshold. Built on the 'Huesitos' dataset (326 fracture + 300 non-fracture images) and compared HOG, Otsu, Haralick, and gradient features against deep learning."
     url="https://github.com/Slrosales/Huesitos/blob/main/Informe%20de%20Semillero%20de%20Investigación.pdf"
     badge="Research"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Colombians Detained Abroad"
+    img={colDet}
+    desc="Ongoing investigation (since 2021) into Colombians detained abroad, presented as an interactive dashboard and world map built from consular data. Filter by country, offence, age, gender, and legal status. Currently under construction."
+    url="https://col-detenidos-exterior.vercel.app"
+    badge="Research"
+    status="Under construction"
   />
   <div class="divider my-0"></div>
   <div class="rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%] p-5">
